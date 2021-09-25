@@ -78,5 +78,4 @@ jobs:
           destination: test-reports
 
       - codecov/upload:
-          conf: codecov.yml
           file: coverage.xml
