@@ -76,7 +76,3 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
-
-      - codecov/upload:
-          conf: codecov.yml
-          file: coverage.xml
