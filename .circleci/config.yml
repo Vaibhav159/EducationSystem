@@ -65,7 +65,7 @@ jobs:
           name: Run Tests
           command: |
             . venv/bin/activate
-            coverage run --source=apps manage.py test
+            coverage run manage.py test
 
       - run:
           name: Create Coverage XML
@@ -76,3 +76,7 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
+
+      - codecov/upload:
+          conf: codecov.yml
+          file: coverage.xml
