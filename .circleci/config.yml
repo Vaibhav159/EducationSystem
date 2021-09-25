@@ -77,5 +77,8 @@ jobs:
           path: test-reports
           destination: test-reports
 
+      - store_test_results:
+          path: test-reports
+
       - codecov/upload:
           file: coverage.xml
